@@ -33,7 +33,7 @@ class OrderDeleteView(LoginRequiredMixin, generic.DeleteView):
 
             return render(
                 request,
-                "application/order_confirm_delete.html",
+                "application/order_delete_info.html",
                 context
             )
 
@@ -41,4 +41,4 @@ class OrderDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 
 class ConfirmationView(LoginRequiredMixin, generic.TemplateView):
-    template_name = "application/order_confirm_delete.html"
+    template_name = "application/order_delete_info.html"
